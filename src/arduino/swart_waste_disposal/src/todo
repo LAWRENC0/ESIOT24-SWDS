@@ -1,0 +1,7 @@
+ - // GUI: add udt state box. statr button should disable.//would be cool if you could see when there's an update
+ - // add calibration time for udt
+ - // buttons should reset udt time
+ - clean code:  swd ct task , logs, ...
+ - // check tasks priorities
+ - // system can sleep while unavailable
+ - // needs to show waste accepted
