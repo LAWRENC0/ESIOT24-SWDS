@@ -235,11 +235,13 @@ bool SWDSystem::isDoorOpenUser() { return ct_state == CTState::OPEN_USER; }
 
 bool SWDSystem::doorMovedTo(Door::State state) {
     door->setDestState(state);
+    if (door->getPowerState() == false) door->setPowerState(true);
     bool isDoorReady = !(door->move());
     if (!isDoorReady) {
         door_transition_state = true;
         return false;
     } else {
+        door->setPowerState(false);
         door_transition_state = false;
         return true;
     }

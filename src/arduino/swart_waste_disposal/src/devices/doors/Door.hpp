@@ -11,10 +11,13 @@ class Door {
     State getCurrState();
     void setDestState(State new_state);
     bool move();
+    bool getPowerState();
+    void setPowerState(bool new_state);
 
    private:
     State curr_state;
     State dest_state;
+    bool power_state;
     int position;
     ServoMotor* servo_motor;
 };
